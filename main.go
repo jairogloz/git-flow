@@ -20,5 +20,11 @@ func main() {
 		})
 	})
 
+	r.GET("/box", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "box",
+		})
+	})
+
 	log.Fatalln(r.Run(":8080"))
 }
