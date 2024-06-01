@@ -14,5 +14,11 @@ func main() {
 		})
 	})
 
+	r.GET("/volley", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "volley",
+		})
+	})
+
 	log.Fatalln(r.Run(":8080"))
 }
